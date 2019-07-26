@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
     <title>curly-palm-tree | playing with jekyll themes</title>
@@ -18,27 +19,13 @@
     {"@type":"WebSite","url":"https://cyrusliang.github.io/curly-palm-tree/","headline":"curly-palm-tree","name":"curly-palm-tree","description":"playing with jekyll themes","@context":"http://schema.org"}</script>
     <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/curly-palm-tree/main.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
-    <div id="header">
-        <nav>
-            <li class="fork">
-                <a href="https://github.com/CyrusLiang/curly-palm-tree">View On GitHub</a>
-            </li>
-            <li class="downloads">
-                <a href="https://github.com/pages-themes/midnight/zipball/master">ZIP</a>
-            </li>
-            <li class="downloads">
-                <a href="https://github.com/pages-themes/midnight/tarball/master">TAR</a>
-            </li>
-            <li class="title">DOWNLOADS</li>
-        </nav>
-    </div>
+    <div id="header"></div>
 
     <div class="wrapper">
         <section>
@@ -296,6 +283,10 @@
             </div>
         </section>
     </div>
+
+    <script>
+        $('#header').load('header.html #header-nav');
+    </script>
 </body>
 
 </html>
