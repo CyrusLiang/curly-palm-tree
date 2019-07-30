@@ -1,7 +1,7 @@
 function loadHeader() {
     $('#header').load('https://cyrusliang.github.io/curly-palm-tree/globals/header.html #header-nav');
     var github = 'https://github.com/CyrusLiang/curly-palm-tree/';
-    var curr = window.location.pathname.substring(17);
+    var curr = window.location.pathname.substr(17);
     if (curr) {
         github = github + 'blob/master/' + curr;
     }
@@ -9,7 +9,12 @@ function loadHeader() {
 }
 function loadTitle() {
     $('#load-title').load('https://cyrusliang.github.io/curly-palm-tree/globals/title.html #title');
-    console.log(window.location.pathname.split('/').pop());
+    var title = window.location.pathname.substr(1,-1);
+    console.log(title);
+    if (title.indexOf('/')) {
+        title.split('/').pop().replace('-', ' ');
+    }
+    console.log(title);
 }
 
 $(document).ready(function() {
