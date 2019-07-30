@@ -5,7 +5,7 @@ function loadHeader() {
 }
 function loadTitle() {
     $('section').load('https://cyrusliang.github.io/curly-palm-tree/globals/title.html #title');
-    console.log(window.location.pathname.split('/').last());
+    console.log(window.location.pathname.split('/').pop());
 }
 
 $(document).ready(function() {
