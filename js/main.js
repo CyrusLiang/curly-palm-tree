@@ -6,18 +6,20 @@ function loadHeader() {
         github = github + 'blob/master/' + curr;
     }
     console.log(github);
+    $('.fork a').attr('href', github);
+    $('.fork a').text('View This Page On GitHub');
 }
 function loadTitle() {
     $('#load-title').load('https://cyrusliang.github.io/curly-palm-tree/globals/title.html #title');
     var title = window.location.pathname;
     title = title.substr(1, title.length-2);
-    console.log(title);
     if (title.includes('/')) {
         title = title.split('/').pop();
         title = title.substr(0, title.indexOf('.'));
     }
     title = title.replace(/\-/g, ' ');
     console.log(title);
+    $('section #title h1').text(title);
 }
 
 $(document).ready(function() {
