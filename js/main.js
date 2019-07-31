@@ -12,7 +12,7 @@ function loadTitle() {
     var title = window.location.pathname;
     title = title.substr(1, title.length-2);
     console.log(title);
-    if (title.indexOf('/') != -1) {
+    if (title.includes('/')) {
         title = title.split('/').pop();
         title = title.substr(0, title.indexOf('.'));
     }
