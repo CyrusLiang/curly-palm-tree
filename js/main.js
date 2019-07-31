@@ -14,6 +14,7 @@ function loadTitle() {
     console.log(title);
     if (title.indexOf('/')) {
         title = title.split('/').pop();
+        title = title.substr(0, title.indexOf('.'));
     }
     title = title.replace('-', ' ');
     console.log(title);
