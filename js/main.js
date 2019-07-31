@@ -19,7 +19,7 @@ function loadTitle() {
     }
     title = title.replace(/\-/g, ' ');
     console.log(title);
-    $('section #title h1').text(title);
+    $('#title h1').text(title);
 }
 
 $(document).ready(function() {
