@@ -12,7 +12,7 @@ function loadTitle() {
     var title = window.location.pathname;
     title = title.substr(1, title.length-2);
     console.log(title);
-    if (title.indexOf('/')) {
+    if (title.indexOf('/') != -1) {
         title = title.split('/').pop();
         title = title.substr(0, title.indexOf('.'));
     }
@@ -24,5 +24,4 @@ $(document).ready(function() {
     console.log('Hello!');
     loadHeader();
     loadTitle();
-    console.log(window.location.pathname);
 });
