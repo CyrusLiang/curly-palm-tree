@@ -9,6 +9,7 @@ function loadHeader() {
     $('.fork a').attr('href', github);
     $('.fork a').text('View This Page On GitHub');
 }
+loadHeader();
 function loadTitle() {
     $('#load-title').load('https://cyrusliang.github.io/curly-palm-tree/globals/title.html #title');
     var title = window.location.pathname;
@@ -21,9 +22,7 @@ function loadTitle() {
     console.log(title);
     $('#title h1').text(title);
 }
-
 $(document).ready(function() {
     console.log('Hello!');
-    loadHeader();
     loadTitle();
 });
