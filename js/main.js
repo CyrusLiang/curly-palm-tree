@@ -13,8 +13,8 @@ function doHeader() {
     }
 
     console.log(github);
-    $('#header .fork a').attr('href', github);
-    $('#header .fork a').text('View This Page On GitHub');
+    document.querySelector('#header .fork a').href = github;
+    document.querySelector('#header .fork a').innerHTML = 'View This Page On GitHub';
 }
 function doTitle() {
     var title = window.location.pathname;
@@ -26,7 +26,7 @@ function doTitle() {
     title = title.replace(/\-/g, ' ');
     
     console.log(title);
-    $('#title h1').text(title);
+    document.querySelector('#title h1').innerHTML = title;
 }
 
 $(window).on('load', function() {
