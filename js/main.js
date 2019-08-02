@@ -26,7 +26,7 @@ function loadTitle() {
 
 $(window).on('load', function() {
     var ver = $().jquery;
-    console.log(ver + ':- Hello!');
+    console.log(ver + ' :> Hello!');
     loadHeader();
     loadTitle();
 });
