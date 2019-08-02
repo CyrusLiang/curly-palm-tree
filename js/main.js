@@ -1,5 +1,5 @@
 function loadHeader() {
-    $('#header').load('https://cyrusliang.github.io/curly-palm-tree/globals/header.html #header-nav');
+    $('#load-header').load('https://cyrusliang.github.io/curly-palm-tree/globals/header.html #header');
 }
 function loadTitle() {
     $('#load-title').load('https://cyrusliang.github.io/curly-palm-tree/globals/title.html #title');
@@ -13,8 +13,8 @@ function doHeader() {
     }
 
     console.log(github);
-    $('.fork a').attr('href', github);
-    $('.fork a').text('View This Page On GitHub');
+    $('#header .fork a').attr('href', github);
+    $('#header .fork a').text('View This Page On GitHub');
 }
 function doTitle() {
     var title = window.location.pathname;
