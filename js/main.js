@@ -7,8 +7,8 @@ function loadHeader() {
     }
 
     console.log(github);
-    $('a[href="https://github.com/CyrusLiang/curly-palm-tree"]').attr('href', github);
-    $('a[href="https://github.com/CyrusLiang/curly-palm-tree"]').text('View This Page On GitHub');
+    $('.fork a').prop('href', github);
+    $('.fork a').text('View This Page On GitHub');
 }
 function loadTitle() {
     $('#load-title').load('https://cyrusliang.github.io/curly-palm-tree/globals/title.html #title');
