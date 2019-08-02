@@ -12,11 +12,6 @@ function loadHeader() {
 }
 function loadTitle() {
     $('#load-title').load('https://cyrusliang.github.io/curly-palm-tree/globals/title.html #title');
-}
-
-function doHeader() {
-}
-function doTitle() {
     var title = window.location.pathname;
     title = title.substr(1, title.length-2);
     if (title.includes('/')) {
@@ -26,13 +21,11 @@ function doTitle() {
     title = title.replace(/\-/g, ' ');
     
     console.log(title);
-    $('#h1-title').text(title);
+    $('#title h1').html(title);
 }
 
 $(window).on('load', function($) {
     console.log('Hello!');
     loadHeader();
     loadTitle();
-    doHeader();
-    doTitle();
 });
