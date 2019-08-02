@@ -1,5 +1,4 @@
-function loadHeader() {
-    $('#load-header').load('https://cyrusliang.github.io/curly-palm-tree/globals/header.html #header');
+function doHeader() {
     var github = 'https://github.com/CyrusLiang/curly-palm-tree/';
     var curr = window.location.pathname.substr(17);
     if (curr) {
@@ -10,8 +9,12 @@ function loadHeader() {
     $('.fork a').prop('href', github);
     $('.fork a').text('View This Page On GitHub');
 }
-function loadTitle() {
-    $('#load-title').load('https://cyrusliang.github.io/curly-palm-tree/globals/title.html #title');
+function loadHeader(callback) {
+    $('#load-header').load('https://cyrusliang.github.io/curly-palm-tree/globals/header.html #header');
+    callback();
+}
+
+function doTitle() {
     var title = window.location.pathname;
     title = title.substr(1, title.length-2);
     if (title.includes('/')) {
@@ -23,10 +26,14 @@ function loadTitle() {
     console.log(title);
     $('#title h1').html(title);
 }
+function loadTitle(callback) {
+    $('#load-title').load('https://cyrusliang.github.io/curly-palm-tree/globals/title.html #title');
+    callback();
+}
 
 $(window).on('load', function() {
     var ver = $().jquery;
     console.log(ver + ' :> Hello!');
-    loadHeader();
-    loadTitle();
+    loadHeader(doHeader);
+    loadTitle(doTitle);
 });
