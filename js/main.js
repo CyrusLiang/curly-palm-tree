@@ -36,10 +36,6 @@ function loadTitle(callback) {
 $(window).on('load', function() {
     var ver = $().jquery;
     console.log(ver + ' :> Hello!');
-    doHeader();
-    doTitle();
-});
-$(function() {
     loadHeader(doHeader);
     loadTitle(doTitle);
 });
