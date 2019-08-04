@@ -10,6 +10,7 @@ function doHeader() {
     $('.fork a').append('View This Page On GitHub');
 }
 function loadHeader(callback) {
+    console.log("loadH");
     $('#load-header').load('https://cyrusliang.github.io/curly-palm-tree/globals/header.html #header');
     callback();
 }
@@ -27,6 +28,7 @@ function doTitle() {
     $(title).appendTo('#title h1');
 }
 function loadTitle(callback) {
+    console.log("loadT");
     $('#load-title').load('https://cyrusliang.github.io/curly-palm-tree/globals/title.html #title');
     callback();
 }
