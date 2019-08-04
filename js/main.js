@@ -6,8 +6,8 @@ function doHeader() {
     }
 
     console.log(github);
-    $('.fork a').prop('href', github);
-    $('.fork a').append('View This Page On GitHub');
+    // $('.fork a').prop('href', github);
+    $('.fork').append('<a href="' + github + '">View This Page On GitHub</a>');
 }
 function loadHeader(callback) {
     console.log("loadH");
