@@ -7,7 +7,7 @@ function doHeader() {
 
     console.log(github);
     $('.fork a').prop('href', github);
-    $('.fork a').text('View This Page On GitHub');
+    $('.fork a').append('View This Page On GitHub');
 }
 function loadHeader(callback) {
     $('#load-header').load('https://cyrusliang.github.io/curly-palm-tree/globals/header.html #header');
@@ -24,7 +24,7 @@ function doTitle() {
     title = title.replace(/\-/g, ' ');
     
     console.log(title);
-    $('#title h1').html(title);
+    $(title).appendTo('#title h1');
 }
 function loadTitle(callback) {
     $('#load-title').load('https://cyrusliang.github.io/curly-palm-tree/globals/title.html #title');
